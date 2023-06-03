@@ -4,7 +4,6 @@ public class Main {
 
     public static void sortBubble(int[] mas) {
         int a;
-        int c = 0;
         boolean isSwap = true;
         for(int i = mas.length-1; i >= 1 && isSwap; i--) {
             isSwap = false;
@@ -15,14 +14,8 @@ public class Main {
                     mas[j+1] = a;
                     isSwap = true;
                 }
-                for (int e : mas) {
-                    System.out.println(e);
-                }
-                System.out.println("-----------");
-                c++;
             }
         }
-        System.out.println(c);
     }
 
     //Не знал надо ли делать функцию регистронезависимой, но сделал
@@ -57,6 +50,9 @@ public class Main {
         char c = 'Е';
         String s = "Локаторы (locators) в автоматизации тестирования веб-приложений - это специальные селекторы или идентификаторы, которые используются для точного нахождения и взаимодействия с элементами на веб-странице. Локаторы позволяют автоматически находить элементы, взаимодействовать с ними и проверять их состояние.";
         sortBubble(mas);
+        for (int i : mas) {
+            System.out.println(i);
+        }
 
         System.out.println("Медиана массива: " + searchMedian(mas));
 
